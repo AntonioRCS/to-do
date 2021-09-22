@@ -1,0 +1,14 @@
+.main-header {
+    background-color: #1976d2;
+    color: white;
+}
+
+.header-text {
+  justify-content: left;
+  align-items: center;
+  display: flex;
+}
+
+.icon-button{
+  color: white;
+}
