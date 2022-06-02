@@ -13,7 +13,7 @@ import "@fontsource/roboto";
 
 const MainHeader = () => {
   return (
-    <div className="container-fluid g-1 p-1 main-header">
+    <header className="container-fluid g-1 p-1 main-header">
         <div className="row">
           <div className="col">
             <IconButton aria-label="menu">
@@ -27,7 +27,7 @@ const MainHeader = () => {
             <Typography variant="h6">Lista de Afazeres</Typography>
           </div>
         </div>
-      </div>
+      </header>
   );
 }
 

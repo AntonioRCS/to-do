@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 
-import { Modal, Paper, TextField, Container } from "@material-ui/core";
-import { makeStyles } from '@material-ui/core/styles';
+import { Modal, Paper, TextField, Container, Button } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
 import "./AddModal.css";
 
 const useStyles = makeStyles({
     root: {
-      marginLeft: '1rem',
-      width: '40%',
+        marginLeft: "1rem",
+        width: "40%",
     },
 });
 
 const AddModal = (props) => {
     const longDate = new Date();
     const shortDate = longDate.toISOString().slice(0, 10);
-    
-    const [selectedDate, ] = useState(shortDate);
+
+    const [selectedDate] = useState(shortDate);
 
     // const handleDateChange = (date) => {
     //     setSelectedDate(date);
@@ -39,7 +39,7 @@ const AddModal = (props) => {
                             label="Descrição"
                             multiline
                         />
-                        
+
                         <TextField
                             id="startDate"
                             label="Inicio"
@@ -48,7 +48,7 @@ const AddModal = (props) => {
                             InputLabelProps={{
                                 shrink: true,
                             }}
-                            className='st-date'
+                            className="st-date"
                         />
                         <TextField
                             id="endDate"
@@ -60,7 +60,14 @@ const AddModal = (props) => {
                             }}
                             className={classes.root}
                         />
-
+                        <div className="buttons">
+                            <Button style={{ marginRight: "1rem" }} variant="outlined" onClick={props.close}>
+                                Cancelar
+                            </Button>
+                            <Button variant="contained" color="primary" onClick={props.close}>
+                                Confirmar
+                            </Button>
+                        </div>
                     </Container>
                 </div>
             </Paper>
